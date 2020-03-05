@@ -154,6 +154,7 @@ impl NetDoor {
                         None => self.ttype = Some(ttype),
                         Some(ref st) if st == &ttype => {
                             self.ansi = false;
+                            self.ttype = None;
                             return Ok(false);
                         }
                         _ => (),
